@@ -14,10 +14,14 @@ public abstract class Animal implements Runnable
        if(_age < 0)
        {
            this._age = 0;
+       }else
+       {
+           this._age = _age;
        }
+
         this._name = _name;
 
-       idTemp = (int) (Math.random()*100);
+       idTemp = (int) (Math.random()*100000);
         this._id = idTemp;
 
         if((!_gender.equals("Male")) && (!_gender.equals("Female")))

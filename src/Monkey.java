@@ -12,15 +12,15 @@ public Monkey(int age, String name, String gender)
         while(this.isAlive())
         {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(15000);
             } catch (InterruptedException e)
             {
                 e.printStackTrace();
             }
             this.set_age(this.get_age()+1);
-            if(get_age() == 30)
+            if(get_age() == 15)
             {
-                set_isHungry(false);
+                this.setAlive(false);
             }
 
             if((get_age() % 5 ) == 0)
@@ -31,5 +31,22 @@ public Monkey(int age, String name, String gender)
             }
         }
 
+    }
+
+
+    public String toString()
+    {
+        String s;
+        if(this.get_gender().equals("Male"))
+        {
+            s = (get_name() + " Is a Male Monkey, And He is "+get_age()
+            +" Years Old");
+        }else
+        {
+            s = (get_name() + "Is a Female Monkey, And She is "+get_age()
+                    +" Years Old");
+        }
+
+        return s;
     }
 }
