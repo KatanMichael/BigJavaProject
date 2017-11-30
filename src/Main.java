@@ -26,7 +26,7 @@ public class Main
 
         do
         {
-            printMenuChoises();
+            printMenuChoices();
             menuChoice = scan.nextInt();
 
             switch (menuChoice)
@@ -42,7 +42,7 @@ public class Main
 
                 case 2:
                 {
-
+                    visitAnimal();
                 }
 
                 case 3:
@@ -59,7 +59,12 @@ public class Main
 
     }
 
-    private static void printMenuChoises()
+    private static void visitAnimal()
+    {
+        
+    }
+
+    private static void printMenuChoices()
     {
         System.out.println("Press 1 to add an Animal to the zoo\n"
         + "press 2 to visit an animal from the zoo\n"
