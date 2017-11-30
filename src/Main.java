@@ -3,10 +3,12 @@ import java.util.Scanner;
 
 public class Main
 {
-    static Scanner scan;
-    static Names listOfNames;
-    static ArrayList<Thread> allTheThreads;
-    static Zoo myZoo;
+    private static Scanner scan;
+    private static Names listOfNames;
+    private static ArrayList<Thread> allTheThreads;
+    private static Zoo myZoo;
+
+
     public static void main(String[] args)
     {
         scan = new Scanner(System.in);
@@ -61,7 +63,7 @@ public class Main
 
     private static void visitAnimal()
     {
-        
+
     }
 
     private static void printMenuChoices()
