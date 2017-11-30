@@ -6,11 +6,14 @@ public class Main
     static Scanner scan;
     static Names listOfNames;
     static ArrayList<Thread> allTheThreads;
+    static Zoo myZoo;
     public static void main(String[] args)
     {
         scan = new Scanner(System.in);
         listOfNames = new Names();
         allTheThreads = new ArrayList<>();
+        myZoo = new Zoo();
+
 
         mainMenu();
 
@@ -28,15 +31,31 @@ public class Main
 
             switch (menuChoice)
             {
+                case 0:
+                {
+                    break;
+                }
                 case 1:
                 {
                     addAnimal();
                 }
 
+                case 2:
+                {
+
+                }
+
+                case 3:
+
+                {
+
+
+                }
+
 
 
             }
-        }while((menuChoice != 0));
+        }while(menuChoice != 0);
 
     }
 
@@ -51,6 +70,25 @@ public class Main
 
     private static void addAnimal()
     {
+        int choice;
+        System.out.println("To add monkey press 1\n");
 
+        choice = scan.nextInt();
+
+        switch (choice)
+        {
+            case 1:
+            {
+                int randNum = (int) ((Math.random()*100)%14);
+                Monkey temp = new Monkey(randNum,listOfNames.getRandomName(),"");
+                myZoo.addAnimal(temp);
+                Thread tTemp = new Thread(temp);
+                allTheThreads.add(tTemp);
+                tTemp.setDaemon(true);
+                tTemp.start();
+                System.out.println(temp.get_name() +" The Ape Was Added to the Zoo");
+            }
+
+        }
     }
 }
