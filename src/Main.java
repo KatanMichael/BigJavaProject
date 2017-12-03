@@ -16,6 +16,7 @@ public class Main
         allTheThreads = new ArrayList<>();
         myZoo = new Zoo();
 
+        System.out.println("WTH!");
 
         mainMenu();
 
